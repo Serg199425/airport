@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <%= link_to 'Add new flight', flights_create_path, class: "btn btn-primary btn-lg button-link float-right-button"%>
+    <div class="clear"></div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Latest Flights</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Airplane Model</th>
+            <th>Takes of Start Time</th>
+            <th>Takes of End Time</th>
+          </tr>
+        </thead>
+        <tbody id="flights_container">
+          <%= render partial: "flight_table", collection: @flights, as: :flight %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

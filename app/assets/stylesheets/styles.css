@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/glyphicons-halflings-regular.eot');
+    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.ui-helper-hidden-accessible{ display:none; }
+
+.simple_form.new_flight input, .simple_form.new_flight button {
+  margin-top: 15px !important;
+}
+
+.button-link {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.datetime_picker.required.control-label {
+  display: none;
+}
+
+.clear { clear: both; }
+
+.float-right-button { float: right; margin: 10px 0; }

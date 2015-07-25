@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4" style="margin-top: 50px">
+    <h1>Add new flight</h1>
+    <%= simple_form_for @flight do |f| %>
+      <%= autocomplete_field_tag :registration_number, '', autocomplete_airplane_registration_number_flights_path, placeholder: "Airplane register number" %>
+      <%= f.input :takes_of_start_time, :as => :datetime_picker %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
