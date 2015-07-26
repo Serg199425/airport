@@ -23,3 +23,5 @@
 .clear { clear: both; }
 
 .float-right-button { float: right; margin: 10px 0; }
+
+.table-title { padding: 10px !important; font-size: 18px; }

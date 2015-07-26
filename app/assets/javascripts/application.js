@@ -23,7 +23,5 @@
 //= require pickers
 
 //= require websocket_rails/main
-//= require handlebars
-//= require_tree ./templates
 //= require_tree .
 

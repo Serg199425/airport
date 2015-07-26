@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading table-title">Latest Flights</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Airplane Model</th>
+        <th>Takes of Start Time</th>
+        <th>Takes of End Time</th>
+      </tr>
+    </thead>
+    <tbody id="flights_container">
+      <%= render partial: "flights_table_item", collection: @flights, as: :flight %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate @flights, renderer: BootstrapPagination::Rails %>

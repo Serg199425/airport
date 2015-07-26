@@ -1,7 +1,12 @@
 class FlightsController < ApplicationController
   autocomplete :airplane, :registration_number, :limit => 10
+
   def index
     @flights = Flight.order('takes_of_end_time asc').paginate(:page => params[:page])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create

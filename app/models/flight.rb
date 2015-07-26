@@ -7,6 +7,6 @@ class Flight < ActiveRecord::Base
 
   self.per_page = FLIGHTS_PER_PAGE
   def update_flights
-    WebsocketRails[:flights].trigger 'update', self
+    WebsocketRails[:flights].trigger 'update'
   end
 end
