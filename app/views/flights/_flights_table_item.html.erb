@@ -1,6 +1,8 @@
 <tr>
   <th scope="row"><%= flight.id %></th>
-  <td><%= flight.airplane_id %></td>
-  <td><%= flight.takes_of_start_time %></td>
-  <td><%= flight.takes_of_end_time %></td>
+  <td><%= flight.airplane.model_name %></td>
+  <td><%= flight.airplane.registration_number %></td>
+  <td><%= flight.take_off_start_time %></td>
+  <td><%= flight.take_off_end_time %></td>
+  <td><%= flight.status %></td>
 </tr>

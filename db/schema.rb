@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20150714215812) do
   create_table "flights", force: true do |t|
     t.integer  "airplane_id"
     t.string   "status"
-    t.datetime "takes_of_start_time"
-    t.datetime "takes_of_end_time"
+    t.datetime "take_off_start_time"
+    t.datetime "take_off_end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

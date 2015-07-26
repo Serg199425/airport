@@ -25,3 +25,9 @@
 .float-right-button { float: right; margin: 10px 0; }
 
 .table-title { padding: 10px !important; font-size: 18px; }
+
+.dashed-border { border: 1px dashed #dadada; padding: 20px; }
+
+.centered { text-align: center; }
+
+.flights-empty-container { font-size: 20px; margin-top: 200px; }

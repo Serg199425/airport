@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  enumerize:
+    flight:
+      status:
+        waiting: "Waiting"
+        in_progress: "Taking Off"
+        ended: "Took Off"

@@ -1,0 +1,14 @@
+<% if @flights.present? %>
+  <%= link_to 'Add new flight', flights_create_path, class: "btn btn-primary btn-lg button-link float-right-button"%>
+  <div class="clear"></div>
+  <div id="flights_table">
+    <%= render partial: "flights_table" %>
+  </div>
+<% else %>
+  <div class="centered flights-empty-container">
+    <span class="blank_slate dashed-border">
+      There are no Flights yet.
+      <%= link_to 'Add new flight', flights_create_path %>
+    </span>
+  </div>
+<% end %>

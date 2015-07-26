@@ -3,8 +3,8 @@ class CreateFlights < ActiveRecord::Migration
     create_table :flights do |t|
       t.belongs_to :airplane, index: true
       t.string :status
-      t.datetime :takes_of_start_time
-      t.datetime :takes_of_end_time
+      t.datetime :take_off_start_time
+      t.datetime :take_off_end_time
       t.timestamps
     end
   end

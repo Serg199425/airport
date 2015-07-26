@@ -4,7 +4,7 @@
     <h1>Add new flight</h1>
     <%= simple_form_for @flight do |f| %>
       <%= autocomplete_field_tag :registration_number, '', autocomplete_airplane_registration_number_flights_path, placeholder: "Airplane register number" %>
-      <%= f.input :takes_of_start_time, :as => :datetime_picker %>
+      <%= f.input :take_off_start_time, :as => :datetime_picker %>
       <%= f.submit %>
     <% end %>
   </div>
