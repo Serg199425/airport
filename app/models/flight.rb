@@ -8,6 +8,7 @@ class Flight < ActiveRecord::Base
   self.per_page = FLIGHTS_PER_PAGE
 
   after_save :update_flights
+  after_destroy :update_flights
 
   def update_flights
     WebsocketRails[:flights].trigger 'update' if self.status

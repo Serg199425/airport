@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-lg-4"></div>
   <div class="col-lg-4" style="margin-top: 50px">
-    <h1>Add new flight</h1>
-    <%= simple_form_for @flight, url: flights_create_path do |f| %>
+    <h1>Edit flight</h1>
+    <%= simple_form_for @flight, url: flights_edit_path do |f| %>
       <%= autocomplete_field_tag :registration_number, @registration_number ? @registration_number : '', autocomplete_airplane_path, placeholder: "Airplane register number" %>
       <%= f.input :take_off_start_time, :as => :datetime_picker, input_html: {data: {date_options: { minDate: 'now' }}}, placeholder: "Take Off Time" %>
       <%= f.submit %>

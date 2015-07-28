@@ -7,7 +7,8 @@
 
 .ui-helper-hidden-accessible{ display:none; }
 
-.simple_form.new_flight input, .simple_form.new_flight button {
+.simple_form.new_flight input[type=text], .simple_form.new_flight button, 
+.simple_form.edit_flight input[type=text], .simple_form.edit_flight button {
   margin-top: 15px !important;
 }
 
@@ -45,3 +46,9 @@
 body.logged-out { margin-top: 200px; }
 body.logged-out .alert.alert-danger { width: 80%; margin-left: 10%; display: none; }
 .simple_form.new_flight #registration_number { width: 99%; }
+.navbar-brand { margin-bottom: 0; }
+.logout-button:hover { background-color: #3071a9 !important; }
+.logout-button { margin: 9px; line-height: 0 !important; height: 32px !important; }
+form .clearfix:before, form .clearfix:after {
+  display: inline;
+}

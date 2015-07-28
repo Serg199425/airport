@@ -5,4 +5,8 @@
   <td><%= flight.take_off_start_time %></td>
   <td><%= flight.take_off_end_time %></td>
   <td><%= flight.status %></td>
+  <% if flight.status != :ended %>
+    <td><%= link_to 'Edit', flights_edit_path(flight) %></td>
+    <td><%= link_to 'Delete', flights_delete_path(flight) %></td>
+  <% end %>
 </tr>

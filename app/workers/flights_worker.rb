@@ -4,6 +4,7 @@ class FlightsWorker
   def perform(new_flight_id)
     new_flight = Flight.find_by(id: new_flight_id)
     return if new_flight.blank?
+    new_flight.take_off_start_time = Time.now if new_flight.take_off_start_time < Time.now
     take_off_duration = random_take_off_duration
     flights = Flight.where('take_off_end_time > ?', new_flight.take_off_start_time).order('take_off_end_time asc')
     start_time = new_flight.take_off_start_time

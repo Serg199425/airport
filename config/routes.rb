@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'flights#index', as: :flights_index
   get '/flights/create', to: 'flights#create', as: :flights_create
-  get '/flights/create', to: 'flights#create', as: :flights
   post '/flights/create', to: 'flights#create'
+  get '/flights/edit/:id', to: 'flights#edit', as: :flights_edit
+  patch '/flights/edit/:id', to: 'flights#edit'
+  get '/flights/delete/:id', to: 'flights#delete', as: :flights_delete
   get '/history', to: 'flights#history', as: :flights_history
   get '/autocomplete_airplane', to: 'flights#autocomplete_airplane', as: :autocomplete_airplane
   # The priority is based upon order of creation: first created -> highest priority.
