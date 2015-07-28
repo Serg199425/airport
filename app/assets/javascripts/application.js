@@ -23,5 +23,7 @@
 //= require pickers
 
 //= require websocket_rails/main
-//= require_tree .
+//= require menu
+//= require jquery.dateformat.min
+//= require jquery.epiclock.min
 

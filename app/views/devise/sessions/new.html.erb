@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Airport</title>
+    <%= include_gon %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "login.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="logged-out">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8">
+            <div class="login-form-container">
+              <h2 class="centered">Log in</h2>
+              <div class="alert alert-danger centered" role="alert">Login or Password is incorrect</div>
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f| %>
+                <div class="form-group">
+                  <%= f.input :email, required: true, autofocus: true, placeholder: "Email" %>
+                  <%= f.input :password, required: true, placeholder: "Password" %>
+                </div>
+
+                <div class="form-actions">
+                  <%= f.button :submit, "Log in" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+  </body>
+</html>

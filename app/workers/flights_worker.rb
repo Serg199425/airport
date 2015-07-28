@@ -21,6 +21,6 @@ class FlightsWorker
   end
 
   def random_take_off_duration
-    10.minutes + 10.minutes * rand
+    TAKE_OFF_MIN_TIME + TAKE_OFF_MIN_TIME * rand
   end
 end

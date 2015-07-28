@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  window.location.pathname = gon.flights_index_path
+<% else %>
+  $('.form-group').addClass('has-error');
+  $('.alert.alert-danger').show();
+<% end %>

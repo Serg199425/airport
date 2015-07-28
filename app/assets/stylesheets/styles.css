@@ -31,3 +31,16 @@
 .centered { text-align: center; }
 
 .flights-empty-container { font-size: 20px; margin-top: 200px; }
+
+.clock-container { font-size: 34px; color: #3071a9; font-weight: bold; }
+
+.left { float: left;}
+
+.utc { margin-left: 15px; }
+
+.login-form-container { border: 1px solid rgba(0,0,0,.2); padding: 15px; border-radius: 8px; border-color: #ddd; background-color: #fdfdfd; }
+.login-form-container label { display: none; }
+.login-form-container input[type=password], .login-form-container input[type=email] { margin: 5% 10% 0 10%; width: 80%; }
+.login-form-container input[type=submit] { margin-left: 69%; margin-bottom: 20px; }
+body.logged-out { margin-top: 200px; }
+body.logged-out .alert.alert-danger { width: 80%; margin-left: 10%; display: none; }

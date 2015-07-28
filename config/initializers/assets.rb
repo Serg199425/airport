@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( autocomplete-rails.js )
+Rails.application.config.assets.precompile += %w( epiclock.js login.js autocomplete-rails.js flights_websocket.js)

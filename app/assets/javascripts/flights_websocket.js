@@ -5,6 +5,10 @@ channel.bind('update', function(data) {
 });
 
 function append_flight(data) {
-  console.log(data);
+  $('#flights-container').html('<div class="centered flights-empty-container">' +
+    '<img alt="Ajax loader" src="/assets/ajax-loader.gif"></div>');
   return $.getScript(window.location.href);
 }
+
+$(document).ready(append_flight);
+$(document).on('page:load', append_flight);

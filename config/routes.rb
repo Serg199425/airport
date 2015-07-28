@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {sessions: 'users/sessions'}
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: 'flights#index'
+  root to: 'flights#index', as: :flights_index
   get '/flights/create', to: 'flights#create', as: :flights_create
   get '/flights/create', to: 'flights#create', as: :flights
   post '/flights/create', to: 'flights#create'
-
-  resources :flights do
-    get :autocomplete_airplane_registration_number, :on => :collection
-  end
+  get '/history', to: 'flights#history', as: :flights_history
+  get '/autocomplete_airplane', to: 'flights#autocomplete_airplane', as: :autocomplete_airplane
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

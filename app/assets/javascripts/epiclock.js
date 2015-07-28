@@ -1,0 +1,1 @@
+$('#clock').epiclock({format: 'Y-m-d::H:i:s', mode: $.epiclock.modes.explicit, time: new Date(gon.datetime), utc: true})
