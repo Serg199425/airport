@@ -1477,7 +1477,7 @@
 
             if (typeof defaultDate === 'string') {
                 if (defaultDate === 'now' || defaultDate === 'moment') {
-                    defaultDate = moment();
+                    defaultDate = moment().toISOString();
                 }
             }
 

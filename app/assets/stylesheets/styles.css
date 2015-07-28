@@ -44,3 +44,4 @@
 .login-form-container input[type=submit] { margin-left: 69%; margin-bottom: 20px; }
 body.logged-out { margin-top: 200px; }
 body.logged-out .alert.alert-danger { width: 80%; margin-left: 10%; display: none; }
+.simple_form.new_flight #registration_number { width: 99%; }
