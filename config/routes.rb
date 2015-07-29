@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/autocomplete_airplane', to: 'airplanes#autocomplete_airplane', as: :autocomplete_airplane
   get '/airplanes', to: 'airplanes#index', as: :airplanes_index
   get '/airplane/:id', to: 'airplanes#show', as: :airplane_show
+  post '/airplanes_search', to: 'airplanes#search', as: :airplane_search
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
