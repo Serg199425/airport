@@ -1,0 +1,11 @@
+<% if @airplanes.present? %>
+  <div id="airplanes_table">
+    <%= render partial: "airplanes_table" %>
+  </div>
+<% else %>
+  <div class="centered airplanes-empty-container">
+    <span class="blank_slate dashed-border">
+      There are no Airplanes yet.
+    </span>
+  </div>
+<% end %>

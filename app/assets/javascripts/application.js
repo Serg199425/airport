@@ -26,4 +26,5 @@
 //= require menu
 //= require jquery.dateformat.min
 //= require jquery.epiclock.min
+//= require form
 

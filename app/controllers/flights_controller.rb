@@ -29,8 +29,11 @@ class FlightsController < ApplicationController
     if request.post?
       if @flight.save
         FlightsWorker.perform_async(@flight.id)
-        redirect_to action: :index
       end
+    end
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
@@ -46,11 +49,12 @@ class FlightsController < ApplicationController
           @flight.take_off_end_time = nil
           @flight.save
           FlightsWorker.perform_async(@flight.id)
-          redirect_to action: :index
         end
       end
-    else
-      redirect_to action: :index
+    end
+    respond_to do |format|
+      format.html
+      format.js { render 'create.js'}
     end
   end
 
@@ -58,11 +62,5 @@ class FlightsController < ApplicationController
     flight = Flight.find_by(id: params[:id])
     flight.destroy if flight && flight.status != :ended
     redirect_to action: :index
-  end
-
-  def autocomplete_airplane
-    term = params[:term]
-    airplanes = Airplane.where('registration_number LIKE ? OR model_name LIKE ?', "%#{term}%", "%#{term}%").order(:registration_number)
-    render :json => airplanes.map { |airplane| {:id => airplane.id, :label => airplane.model_name.to_s + " " + airplane.registration_number.to_s, :value => airplane.registration_number} }
   end
 end

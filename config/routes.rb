@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   patch '/flights/edit/:id', to: 'flights#edit'
   get '/flights/delete/:id', to: 'flights#delete', as: :flights_delete
   get '/history', to: 'flights#history', as: :flights_history
-  get '/autocomplete_airplane', to: 'flights#autocomplete_airplane', as: :autocomplete_airplane
+  get '/autocomplete_airplane', to: 'airplanes#autocomplete_airplane', as: :autocomplete_airplane
+  get '/airplanes', to: 'airplanes#index', as: :airplanes_index
+  get '/airplane/:id', to: 'airplanes#show', as: :airplane_show
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

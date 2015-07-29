@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   def set_urls
     gon.flights_index_path = flights_index_path
     gon.flights_history_path = flights_history_path
+    gon.airplanes_index_path = airplanes_index_path
   end
 
   def set_datetime

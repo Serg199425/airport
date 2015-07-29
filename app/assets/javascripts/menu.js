@@ -6,6 +6,9 @@ var pageLoad = function ()  {
     case gon.flights_history_path:
       $('.menu-bar .flights_history').toggleClass('active');
       break;
+    case gon.airplanes_index_path:
+      $('.menu-bar .airplanes_index').toggleClass('active');
+      break;
   };
 };
 

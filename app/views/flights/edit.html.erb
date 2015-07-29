@@ -2,8 +2,11 @@
   <div class="col-lg-4"></div>
   <div class="col-lg-4" style="margin-top: 50px">
     <h1>Edit flight</h1>
-    <%= simple_form_for @flight, url: flights_edit_path do |f| %>
-      <%= autocomplete_field_tag :registration_number, @registration_number ? @registration_number : '', autocomplete_airplane_path, placeholder: "Airplane register number" %>
+    <div class="flights-errors"></div>
+    <%= simple_form_for @flight, url: flights_edit_path, remote: true do |f| %>
+      <div class="form-group registration_number">
+        <%= autocomplete_field_tag :registration_number, @registration_number ? @registration_number : '', autocomplete_airplane_path, placeholder: "Airplane register number", class: "form-control" %>
+      </div>
       <%= f.input :take_off_start_time, :as => :datetime_picker, input_html: {data: {date_options: { minDate: 'now' }}}, placeholder: "Take Off Time" %>
       <%= f.submit %>
     <% end %>

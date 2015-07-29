@@ -1,7 +1,7 @@
 <tr>
   <th scope="row"><%= flight.id %></th>
-  <td><%= flight.airplane.model_name %></td>
-  <td><%= flight.airplane.registration_number %></td>
+  <td><%= link_to flight.airplane.model_name, airplane_show_path(flight.airplane) %></td>
+  <td><%= link_to flight.airplane.registration_number, airplane_show_path(flight.airplane) %></td>
   <td><%= flight.take_off_start_time %></td>
   <td><%= flight.take_off_end_time %></td>
   <td><%= flight.status %></td>

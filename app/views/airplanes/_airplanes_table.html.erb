@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading table-title">Airplanes</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Airplane Model</th>
+        <th>Airplane Registration Number</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="airplanes_table_container">
+      <%= render partial: "airplanes_table_item", collection: @airplanes, as: :airplane %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate @airplanes, renderer: BootstrapPagination::Rails %>

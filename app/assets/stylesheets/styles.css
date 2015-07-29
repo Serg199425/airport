@@ -7,11 +7,6 @@
 
 .ui-helper-hidden-accessible{ display:none; }
 
-.simple_form.new_flight input[type=text], .simple_form.new_flight button, 
-.simple_form.edit_flight input[type=text], .simple_form.edit_flight button {
-  margin-top: 15px !important;
-}
-
 .button-link {
   text-decoration: none !important;
   color: white !important;
@@ -31,7 +26,7 @@
 
 .centered { text-align: center; }
 
-.flights-empty-container { font-size: 20px; margin-top: 200px; }
+.flights-empty-container, .airplanes-empty-container { font-size: 20px; margin-top: 200px; }
 
 .clock-container { font-size: 34px; color: #3071a9; font-weight: bold; }
 
@@ -52,3 +47,5 @@ body.logged-out .alert.alert-danger { width: 80%; margin-left: 10%; display: non
 form .clearfix:before, form .clearfix:after {
   display: inline;
 }
+
+.flights-errors .alert { width: 99%; margin-bottom: 15px; }

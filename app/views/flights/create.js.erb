@@ -1,0 +1,11 @@
+<% if @flight.valid? %>
+  window.location.pathname = gon.flights_index_path
+<% else %>
+  $('.flights-errors').html('<%= errors_full_messages(@flight) %>');
+  <% if @flight.errors[:airplane].present? %>
+    $('.registration_number').addClass('has-error');
+  <% end %>
+  <% if @flight.errors[:take_off_start_time].present? %>
+    $('.flight_take_off_start_time').addClass('has-error');
+  <% end %>
+<% end %>
