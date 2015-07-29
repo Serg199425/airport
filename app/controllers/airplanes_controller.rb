@@ -2,7 +2,7 @@ class AirplanesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @airplanes = Airplane.all.paginate(:page => params[:page])
+    @airplanes = Airplane.order('model_name').paginate(:page => params[:page])
   end
 
   def show

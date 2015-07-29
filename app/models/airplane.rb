@@ -4,4 +4,6 @@ class Airplane < ActiveRecord::Base
   validates :model_name, length: { in: 2..100 }
   validates :registration_number, length: { in: 6..30 }
   has_many :flights
+
+  self.per_page = AIRPLANES_PER_PAGE
 end
