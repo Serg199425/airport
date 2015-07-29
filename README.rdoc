@@ -1,3 +1,7 @@
+This application implements an interface to dispatcher to send a plane to take off. Dispatcher can add flight to queue. Next, the application will add a flight to the schedule. Schedule calculated using sidekiq and updated by rails websockets. Dispatcher can only create and edit Flights. Admin can create Airplanes and Dispatchers.
+
+All Airplanes, Users and Admins you can see in db/seeds.rb file.
+
 Requirements:
   - Ruby 2.2.2
   - Rails 4.1.0
